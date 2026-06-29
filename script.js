@@ -95,278 +95,317 @@ currentRound = 1;
 
 let allQuestions = [
   {
-  text: "Qual destas expressões indica passado?",
+  text: "Complete: 'Look at those dark clouds! It ____ rain.'",
   options: [
-    { text: "tomorrow", score: 0, type: "Wrong", explanation: "'Tomorrow' significa amanhã, portanto indica futuro. A resposta correta era 'yesterday'." },
+    { text: "will", score: 0, type: "Wrong", explanation: "Há uma evidência clara (as nuvens escuras). Por isso usamos 'is going to'. A resposta correta era 'is going to'." },
 
-    { text: "this year", score: 0, type: "Wrong", explanation: "'This year' significa 'esse ano' e se refere ao presente. A resposta correta era 'yesterday'." },
+    { text: "is going to", score: 1, type: "Correct", explanation: "Correto! Quando existe uma evidência no presente, usamos 'be going to'." },
 
-    { text: "yesterday", score: 1, type: "Correct", explanation: "Correto! 'Yesterday' significa ontem e é uma expressão usada para falar sobre o passado." },
+    { text: "going", score: 0, type: "Wrong", explanation: "'Going' sozinho não forma o futuro. A resposta correta era 'is going to'." },
 
-    { text: "today", score: 0, type: "Wrong", explanation: "'Today' significa 'hoje' e se refere ao presente. A resposta correta era 'yesterday'." }
+    { text: "goes to", score: 0, type: "Wrong", explanation: "Essa estrutura está incorreta para falar do futuro. A resposta correta era 'is going to'." }
   ]
 },
 
   
 {
-  text: "A expressão 'five years ago' significa:",
+  text: "Complete: 'I forgot my pencil!' 'Don't worry. I ____ lend you mine.'",
   options: [
-    { text: "daqui a cinco anos", score: 0, type: "Wrong", explanation: "Essa expressão indica futuro. 'Five years ago' significa algo que aconteceu no passado." },
+    { text: "am going to", score: 0, type: "Wrong", explanation: "A decisão foi tomada naquele momento. A resposta correta era 'will'." },
 
-    { text: "há cinco anos", score: 1, type: "Correct", explanation: "Correto! 'Five years ago' significa há cinco anos." },
+    { text: "will", score: 1, type: "Correct", explanation: "Correto! Usamos 'will' para decisões tomadas no momento em que falamos." },
 
-    { text: "durante cinco anos", score: 0, type: "Wrong", explanation: "Essa tradução não corresponde à expressão. 'Five years ago' significa há cinco anos." },
+    { text: "going", score: 0, type: "Wrong", explanation: "A estrutura está incompleta. A resposta correta era 'will'." },
 
-    { text: "em cinco anos", score: 0, type: "Wrong", explanation: "Essa expressão indica futuro. A resposta correta era 'há cinco anos'." }
+    { text: "am", score: 0, type: "Wrong", explanation: "Falta o restante da estrutura. A resposta correta era 'will'." }
   ]
 },
 
   {
-  text: "Qual destes verbos é REGULAR?",
+  text: "Qual frase fala sobre um plano já decidido?",
   options: [
-    { text: "won", score: 0, type: "Wrong", explanation: "'Won' é um verbo irregular. O correto era 'watched'." },
+    { text: "I am going to watch the World Cup final with my friends.", score: 1, type: "Correct", explanation: "Correto! 'Be going to' é usado para planos e intenções já decididos." },
 
-    { text: "went", score: 0, type: "Wrong", explanation: "'Went' é um verbo irregular. O correto era 'watched'." },
+    { text: "I'll answer the phone!", score: 0, type: "Wrong", explanation: "Essa é uma decisão tomada no momento. A resposta correta era 'I am going to watch the World Cup final with my friends.'." },
 
-    { text: "saw", score: 0, type: "Wrong", explanation: "'Saw' é um verbo irregular. O correto era 'watched'." },
+    { text: "Brazil will win the World Cup.", score: 0, type: "Wrong", explanation: "Essa é uma opinião/previsão. A resposta correta era 'I am going to watch the World Cup final with my friends.'." },
 
-    { text: "watched", score: 1, type: "Correct", explanation: "Correto! 'Watched' é um verbo regular porque segue o padrão verbo + ed." }
+    { text: "I don't think Japan will score.", score: 0, type: "Wrong", explanation: "Essa é uma opinião/previsão. A resposta correta era 'I am going to watch the World Cup final with my friends.'." }
   ]
 },
 
   {
-  text: "Qual destas expressões significa 'há dois dias'?",
+  text: "Qual frase mostra uma decisão tomada NAQUELE MOMENTO?",
   options: [
-    { text: "in two days", score: 0, type: "Wrong", explanation: "'In two days' significa daqui a dois dias. A resposta correta era 'two days ago'." },
+    { text: "I'm going to visit my grandparents next weekend.", score: 0, type: "Wrong", explanation: "Esse é um plano já decidido. A resposta correta era 'It's raining. I'll buy a rain poncho!'." },
 
-    { text: "two days ago", score: 1, type: "Correct", explanation: "Correto! 'Two days ago' significa há dois dias." },
+    { text: "We're going to travel next month.", score: 0, type: "Wrong", explanation: "Essa frase fala de um plano futuro. A resposta correta era 'It's raining. I'll buy a rain poncho!'." },
 
-    { text: "for two days", score: 0, type: "Wrong", explanation: "'For two days' significa por dois dias. A resposta correta era 'two days ago'." },
+    { text: "It's raining. I'll buy a rain poncho!", score: 1, type: "Correct", explanation: "Correto! A decisão foi tomada no momento em que começou a chover." },
 
-    { text: "the next two days", score: 0, type: "Wrong", explanation: "Essa expressão se refere ao futuro. A resposta correta era 'two days ago'." }
-  ]
-},
-
-  {
-  text: "Qual destes verbos é o passado de 'play'?",
-  options: [
-    { text: "plays", score: 0, type: "Wrong", explanation: "'Plays' está no presente. A resposta correta era 'played'." },
-
-    { text: "playing", score: 0, type: "Wrong", explanation: "'Playing' indica uma ação em andamento. A resposta correta era 'played'." },
-
-    { text: "played", score: 1, type: "Correct", explanation: "Correto! 'Played' é o Simple Past do verbo 'play'." },
-
-    { text: "playd", score: 0, type: "Wrong", explanation: "Está faltando uma letra. A resposta correta era 'played'." }
-  ]
-},
-
-  {
-  text: "Qual destes verbos é IRREGULAR?",
-  options: [
-    { text: "played", score: 0, type: "Wrong", explanation: "'Played' é um verbo regular. A resposta correta era 'won'." },
-
-    { text: "trained", score: 0, type: "Wrong", explanation: "'Trained' é um verbo regular. A resposta correta era 'won'." },
-
-    { text: "celebrated", score: 0, type: "Wrong", explanation: "'Celebrated' é um verbo regular. A resposta correta era 'won'." },
-
-    { text: "won", score: 1, type: "Correct", explanation: "Correto! 'Won' é o passado de 'win' e é um verbo irregular." }
+    { text: "They're going to study tonight.", score: 0, type: "Wrong", explanation: "Essa frase fala de um plano já organizado. A resposta correta era 'It's raining. I'll buy a rain poncho!'." }
   ]
 },
 
 
  {
-  text: "Qual frase fala sobre algo que aconteceu no passado?",
+  text: "Complete a frase no simple future: 'I think Brazil ____ win the next match.'",
   options: [
-    { text: "Brazil will win the World Cup.", score: 0, type: "Wrong", explanation: "A palavra 'will' indica futuro. A resposta correta era 'Brazil won the World Cup in 2002.'." },
+    { text: "will", score: 1, type: "Correct", explanation: "Correto! Depois de 'I think', normalmente usamos 'will' para fazer previsões baseadas na nossa opinião." },
 
-    { text: "Brazil is playing today.", score: 0, type: "Wrong", explanation: "A frase está falando de uma ação acontecendo agora. A resposta correta era 'Brazil won the World Cup in 2002.'." },
+    { text: "is going to", score: 0, type: "Wrong", explanation: "Aqui estamos dando uma opinião ('I think'), não usando uma evidência. A resposta correta era 'will'." },
 
-    { text: "Brazil won the World Cup in 2002.", score: 1, type: "Correct", explanation: "Correto! O verbo 'won' está no passado e o ano 2002 indica um evento passado." },
+    { text: "going", score: 0, type: "Wrong", explanation: "A estrutura está incompleta. A resposta correta era 'will'." },
 
-    { text: "Brazil can win the World Cup.", score: 0, type: "Wrong", explanation: "A frase fala sobre possibilidade, não sobre um fato passado. A resposta correta era 'Brazil won the World Cup in 2002.'." }
+    { text: "wins", score: 0, type: "Wrong", explanation: "A frase pede futuro. A resposta correta era 'will'." }
+  ]
+},
+
+ 
+{
+  text: "Qual destas frases está INCORRETA?",
+  options: [
+    { text: "Look at the clouds! It's going to rain.", score: 0, type: "Wrong", explanation: "Essa frase está correta porque existe uma evidência, então usamos 'going to'." },
+
+    { text: "I think Brazil will win.", score: 0, type: "Wrong", explanation: "Essa frase está correta para uma opinião." },
+
+    { text: "The phone is ringing. I'm going to answer it!", score: 1, type: "Correct", explanation: "Correto! Como a decisão foi tomada naquele momento, o correto seria é 'I'll answer it!'." },
+
+    { text: "We're going to travel next month. The hotel is already booked.", score: 0, type: "Wrong", explanation: "Essa frase está correta porque fala de um plano já organizado." }
   ]
 },
 
  {
-  text: "Na frase 'Many fans celebrated yesterday.', o que nos diz QUANDO a ação aconteceu?",
+  text: "Complete: 'My family already bought the tickets. We ____ watch the opening match.'",
   options: [
-    { text: "many", score: 0, type: "Wrong", explanation: "'Many' significa muitos. Não indica tempo. A resposta correta era 'yesterday'." },
+    { text: "will", score: 0, type: "Wrong", explanation: "Os ingressos já foram comprados, então existe um plano. A resposta correta era 'are going to'." },
 
-    { text: "fans", score: 0, type: "Wrong", explanation: "'Fans' significa torcedores. Não indica tempo. A resposta correta era 'yesterday'." },
+    { text: "are going to", score: 1, type: "Correct", explanation: "Correto! Como o plano já foi feito, usamos 'be going to'." },
 
-    { text: "celebrated", score: 0, type: "Wrong", explanation: "'Celebrated' está no passado, mas a pergunta pede a palavra que indica quando aconteceu. A resposta correta era 'yesterday'." },
+    { text: "going", score: 0, type: "Wrong", explanation: "A estrutura está incompleta. A resposta correta era 'are going to'." },
 
-    { text: "yesterday", score: 1, type: "Correct", explanation: "Correto! 'Yesterday' significa ontem e mostra claramente que a ação aconteceu no passado." }
+    { text: "is going to", score: 0, type: "Wrong", explanation: "Como falamos em 'we', aqui é 'are', não 'is'. A resposta correta era 'are going to'." }
   ]
 },
 
   {
-  text: "Qual destes verbos é o passado de 'win'?",
+  text: "Qual destas frases está no Simple Future?",
   options: [
-    { text: "winned", score: 0, type: "Wrong", explanation: "'Winned' não existe em inglês. A resposta correta era 'won'." },
+    { text: "Brazil will score first.", score: 1, type: "Correct", explanation: "Correto! A frase usa o futuro com 'will'." },
 
-    { text: "won", score: 1, type: "Correct", explanation: "Correto! 'Won' é o passado irregular do verbo 'win'." },
+    { text: "Brazil scored first.", score: 0, type: "Wrong", explanation: "Essa frase está no passado." },
 
-    { text: "wins", score: 0, type: "Wrong", explanation: "'Wins' está no presente. A resposta correta era 'won'." },
+    { text: "Brazil scores first.", score: 0, type: "Wrong", explanation: "Essa frase está no presente." },
 
-    { text: "winning", score: 0, type: "Wrong", explanation: "'Winning' indica uma ação em andamento. A resposta correta era 'won'." }
+    { text: "Brazil is scoring first.", score: 0, type: "Wrong", explanation: "Essa frase está no presente." }
+  ]
+},
+
+{
+  text: "Qual frase fala sobre um PLANO futuro?",
+  options: [
+    { text: "I'm going to watch the match tonight.", score: 1, type: "Correct", explanation: "Correto! 'Be going to' é usado para planos já decididos." },
+
+    { text: "I'll help you!", score: 0, type: "Wrong", explanation: "Essa é uma decisão tomada no momento. O correto seria 'I'm going to watch the match tonight.'" },
+
+    { text: "I think Brazil will win.", score: 0, type: "Wrong", explanation: "Essa é uma previsão/opinião.  O correto seria 'I'm going to watch the match tonight.'" },
+
+    { text: "I think it will rain tomorrow.", score: 0, type: "Wrong", explanation: "Essa é uma previsão sem evidência. O correto seria 'I'm going to watch the match tonight.'" }
   ]
 },
 
   {
-  text: "Na frase 'The fans watched the match last night.', quais são as duas pistas que indicam que a frase está no passado?",
+  text: "Complete no simple future: 'The sky is very dark. It ____ rain.'",
   options: [
-    { text: "fans e match", score: 0, type: "Wrong", explanation: "Essas palavras não indicam passado. A resposta correta era 'watched e last night'." },
+    { text: "will", score: 0, type: "Wrong", explanation: "Existe uma evidência clara. A resposta correta era 'is going to'." },
 
-    { text: "watched e last night", score: 1, type: "Correct", explanation: "Correto! O verbo no passado e a expressão temporal mostram que a ação aconteceu no passado." },
+    { text: "is going to", score: 1, type: "Correct", explanation: "Correto! Usamos 'be going to' quando vemos uma evidência." },
 
-    { text: "fans e watched", score: 0, type: "Wrong", explanation: "'Fans' não indica passado. A resposta correta era 'watched e last night'." },
+    { text: "going", score: 0, type: "Wrong", explanation: "A estrutura está incompleta." },
 
-    { text: "the e match", score: 0, type: "Wrong", explanation: "Essas palavras não indicam tempo. A resposta correta era 'watched e last night'." }
+    { text: "is", score: 0, type: "Wrong", explanation: "A frase pede futuro." }
   ]
 },
 
   {
-  text: "Na frase 'Brazil played against Haiti.', qual palavra está no Simple Past?",
+  text: "Qual destas expressões normalmente aparece com planos futuros?",
   options: [
-    { text: "Brazil", score: 0, type: "Wrong", explanation: "'Brazil' é o sujeito da frase. A resposta correta era 'played'." },
+    { text: "next weekend", score: 1, type: "Correct", explanation: "Correto! 'Next weekend' é uma expressão de futuro." },
 
-    { text: "against", score: 0, type: "Wrong", explanation: "'Against' é uma preposição. A resposta correta era 'played'." },
+    { text: "yesterday", score: 0, type: "Wrong", explanation: "'Yesterday' indica passado." },
 
-    { text: "Haiti", score: 0, type: "Wrong", explanation: "'Croatia' é um país. A resposta correta era 'played'." },
+    { text: "last month", score: 0, type: "Wrong", explanation: "'Last month' indica passado." },
 
-    { text: "played", score: 1, type: "Correct", explanation: "Correto! 'Played' é o verbo no Simple Past." }
+    { text: "ago", score: 0, type: "Wrong", explanation: "'Ago' é usado para falar do passado." }
   ]
 },
 
   {
-  text: "Na frase 'Germany won the World Cup in 2014.', como sabemos que ela fala do passado?",
+  text: "Qual frase mostra uma OPINIÃO sobre o futuro?",
   options: [
-    { text: "Porque aparece o país Germany", score: 0, type: "Wrong", explanation: "O nome do país não indica tempo. A resposta correta era a alternativa que menciona 'won' e '2014'." },
+    { text: "I think Brazil will reach the final.", score: 1, type: "Correct", explanation: "Correto! 'I think' indica uma opinião, então usamos 'will'." },
 
-    { text: "Porque aparece o evento World Cup", score: 0, type: "Wrong", explanation: "World Cup é apenas o assunto da frase. A resposta correta era a alternativa que menciona 'won' e '2014'." },
+    { text: "Look at the clouds! It's going to rain.", score: 0, type: "Wrong", explanation: "Essa previsão é baseada em uma evidência." },
 
-    { text: "Porque aparece o verbo 'won' e o ano 2014", score: 1, type: "Correct", explanation: "Correto! Tanto o verbo 'won' quanto o ano '2014' mostram que a frase fala do passado." },
+    { text: "We're going to visit the stadium tomorrow.", score: 0, type: "Wrong", explanation: "Essa frase fala de um plano." },
 
-    { text: "Porque aparece a palavra 'the'", score: 0, type: "Wrong", explanation: "'The' é apenas um artigo. A resposta correta era a alternativa que menciona 'won' e '2014'." }
+    { text: "I'll carry your bag.", score: 0, type: "Wrong", explanation: "Essa frase mostra uma decisão espontânea." }
   ]
 },
-
+  
   {
-  text: "Qual destas frases está INCORRETA no passado?",
+  text: "Qual frase usa corretamente 'be going to'?",
   options: [
-    { text: "The team won last year.", score: 0, type: "Wrong", explanation: "Essa frase está correta no passado. A resposta correta era 'The fans watch the match yesterday.'." },
+    { text: "They are going to visit the stadium.", score: 1, type: "Correct", explanation: "Correto! Essa é a estrutura correta do futuro com 'be going to'." },
 
-    { text: "The fans watch the match yesterday.", score: 1, type: "Correct", explanation: "Correto! A frase está incorreta porque 'watch' deveria estar no passado: 'watched'." },
+    { text: "They going to visit the stadium.", score: 0, type: "Wrong", explanation: "Falta o verbo 'are'." },
 
-    { text: "The team trained last week.", score: 0, type: "Wrong", explanation: "Essa frase está correta no passado. A resposta correta era 'The fans watch the match yesterday.'." },
+    { text: "They are going visit the stadium.", score: 0, type: "Wrong", explanation: "Falta a palavra 'to'." },
 
-    { text: "Brazil won the World Cup in 2002.", score: 0, type: "Wrong", explanation: "Essa frase está correta no passado. A resposta correta era 'The fans watch the match yesterday.'." }
-  ]
-},
-
-  {
-  text: "Qual destas frases apresenta um verbo irregular E uma expressão de passado?",
-  options: [
-    { text: "The team won last year.", score: 1, type: "Correct", explanation: "Correto! 'Won' é um verbo irregular e 'last year' é uma expressão de passado." },
-
-    { text: "The team wins every year.", score: 0, type: "Wrong", explanation: "O verbo está no presente. A resposta correta era 'The team won last year.'." },
-
-    { text: "The team will win next year.", score: 0, type: "Wrong", explanation: "A frase está no futuro. A resposta correta era 'The team won last year.'." },
-
-    { text: "The team is winning now.", score: 0, type: "Wrong", explanation: "A frase fala de uma ação em andamento. A resposta correta era 'The team won last year.'." }
+    { text: "They are go to visit the stadium.", score: 0, type: "Wrong", explanation: "A estrutura está incorreta. Seria 'going', não 'go.'" }
   ]
 },
 
  {
-  text: "Qual frase contém um verbo REGULAR?",
+  text: "Complete no Simple Future: 'I think Argentina ____ play well today.'",
   options: [
-    { text: "Uruguay won the first World Cup.", score: 0, type: "Wrong", explanation: "'Won' é um verbo irregular. A resposta correta era 'Fans watched the final.'." },
+    { text: "will not", score: 1, type: "Correct", explanation: "Correto! 'I think' normalmente é seguido de 'will'." },
 
-    { text: "Fans watched the final.", score: 1, type: "Correct", explanation: "Correto! 'Watched' é um verbo regular formado com -ed." },
+    { text: "is going to", score: 0, type: "Wrong", explanation: "Aqui estamos dando uma opinião sem evidência." },
 
-    { text: "People went to Qatar.", score: 0, type: "Wrong", explanation: "'Went' é um verbo irregular. A resposta correta era 'Fans watched the final.'." },
+    { text: "going", score: 0, type: "Wrong", explanation: "A estrutura está incompleta." },
 
-    { text: "Many fans saw the match.", score: 0, type: "Wrong", explanation: "'Saw' é um verbo irregular. A resposta correta era 'Fans watched the final.'." }
-  ]
-},
-
-
-  {
-  text: "Qual frase contém um verbo IRREGULAR?",
-  options: [
-    { text: "Brazil played very well.", score: 0, type: "Wrong", explanation: "'Played' é um verbo regular. A resposta correta era 'Spain won the World Cup in 2010.'." },
-
-    { text: "Fans celebrated after the match.", score: 0, type: "Wrong", explanation: "'Celebrated' é um verbo regular. A resposta correta era 'Spain won the World Cup in 2010.'." },
-
-    { text: "Spain won the World Cup in 2010.", score: 1, type: "Correct", explanation: "Correto! 'Won' é um verbo irregular." },
-
-    { text: "The team trained every day.", score: 0, type: "Wrong", explanation: "'Trained' é um verbo regular. A resposta correta era 'Spain won the World Cup in 2010.'." }
+    { text: "plays", score: 0, type: "Wrong", explanation: "A frase pede futuro." }
   ]
 },
 
   {
-  text: "Qual destas expressões NÃO indica passado?",
+  text: "Qual frase mostra uma previsão baseada no que estamos vendo AGORA?",
   options: [
-    { text: "yesterday", score: 0, type: "Wrong", explanation: "'Yesterday' significa ontem e indica passado. A resposta correta era 'next month'." },
+    { text: "Look! The baby is going to cry.", score: 1, type: "Correct", explanation: "Correto! Existe uma evidência clara no momento." },
 
-    { text: "last year", score: 0, type: "Wrong", explanation: "'Last year' significa ano passado e indica passado. A resposta correta era 'next month'." },
+    { text: "I think the baby will like soccer.", score: 0, type: "Wrong", explanation: "Essa é uma opinião/previsão." },
 
-    { text: "in 2014", score: 0, type: "Wrong", explanation: "Um ano passado indica passado. A resposta correta era 'next month'." },
+    { text: "I'm going to visit my cousin next weekend.", score: 0, type: "Wrong", explanation: "Essa frase fala de um plano." },
 
-    { text: "today", score: 1, type: "Correct", explanation: "Correto! 'Today' significa hoje e indica presente." }
-  ]
-},
-
-  {
-  text: "Observe a frase: 'Fans celebrated yesterday.' Quais são as duas pistas que mostram que ela está falando do passado?",
-  options: [
-    { text: "fans e yesterday", score: 0, type: "Wrong", explanation: "'Fans' não indica passado. A resposta correta era 'celebrated e yesterday'." },
-
-    { text: "celebrated e yesterday", score: 1, type: "Correct", explanation: "Correto! O verbo no passado e a expressão temporal mostram que a frase fala do passado." },
-
-    { text: "fans e celebrated", score: 0, type: "Wrong", explanation: "'Fans' não indica passado. A resposta correta era 'celebrated e yesterday'." },
-
-    { text: "many e fans", score: 0, type: "Wrong", explanation: "Nenhuma dessas palavras indica passado. A resposta correta era 'celebrated e yesterday'." }
-  ]
-},
-
-  {
-  text: "Observe a frase: 'Many people watched the match last week.' O que indica que a frase está no passado?",
-  options: [
-    { text: "só 'watched'", score: 0, type: "Wrong", explanation: "'Watched' ajuda a indicar passado, mas não é a resposta mais completa. A resposta correta era 'watched e last week'." },
-
-    { text: "só 'last week'", score: 0, type: "Wrong", explanation: "'Last week' ajuda a indicar passado, mas não é a resposta mais completa. A resposta correta era 'watched e last week'." },
-
-    { text: "'watched' e 'last week'", score: 1, type: "Correct", explanation: "Correto! Tanto o verbo quanto a expressão temporal mostram que a frase fala do passado." },
-
-    { text: "match", score: 0, type: "Wrong", explanation: "'Match' significa partida e não indica tempo. A resposta correta era 'watched e last week'." }
-  ]
-},
-
-  {
-  text: "Qual frase mostra um verbo regular no simple past E uma expressão de passado?",
-  options: [
-    { text: "Fans celebrated yesterday.", score: 1, type: "Correct", explanation: "Correto! 'Celebrated' é um verbo regular e 'yesterday' é uma expressão de passado." },
-
-    { text: "They played soccer.", score: 0, type: "Wrong", explanation: "'Played' está no simple past, mas não temos uma expressão de passado. A resposta correta era 'Fans celebrated yesterday.'." },
-
-    { text: "They are watching the game.", score: 0, type: "Wrong", explanation: "A frase fala de uma ação acontecendo agora. A resposta correta era 'Fans celebrated yesterday.'." },
-
-    { text: "Fans are celebrating now.", score: 0, type: "Wrong", explanation: "A frase fala de uma ação acontecendo agora. 'Now' é uma expressão de tempo, mas não de tempo passado. A resposta correta era 'Fans celebrated yesterday.'." }
+    { text: "I'll answer the question.", score: 0, type: "Wrong", explanation: "Essa frase mostra uma decisão espontânea." }
   ]
 },
 
  {
-  text: "Observe a frase: 'France won the World Cup in 2018.' O verbo 'won' significa:",
+  text: "Qual frase está INCORRETA?",
   options: [
-    { text: "participou", score: 0, type: "Wrong", explanation: "'Participou' está no passado, mas não é o significado correto. A resposta correta era 'ganhou'." },
+    { text: "I will help you.", score: 0, type: "Wrong", explanation: "Essa frase está correta." },
 
-    { text: "jogou", score: 0, type: "Wrong", explanation: "'Jogou' está no passado, mas não é o significado correto. A resposta correta era 'ganhou'." },
+    { text: "She is going to travel next month.", score: 0, type: "Wrong", explanation: "Essa frase está correta." },
 
-    { text: "ganhou", score: 1, type: "Correct", explanation: "Correto! 'Won' é o passado do verbo 'win' e significa 'ganhou'." },
+    { text: "They going to play tomorrow.", score: 1, type: "Correct", explanation: "Correto! Falta o verbo 'are': 'They are going to play tomorrow.'." },
 
-    { text: "ganhando", score: 0, type: "Wrong", explanation: "'Ganhando' indica uma ação em andamento. A resposta correta era 'ganhou'." }
+    { text: "Brazil will win.", score: 0, type: "Wrong", explanation: "Essa frase está correta." }
+  ]
+},
+  
+{
+  text: "Complete no Simple Future: 'The referee has the red card in his hand. He ____ remove the player from the game.'",
+  options: [
+    { text: "will", score: 0, type: "Wrong", explanation: "Existe uma evidência clara. A resposta correta era 'is going to'." },
+
+    { text: "is going to", score: 1, type: "Correct", explanation: "Correto! O árbitro já está com o cartão na mão, então usamos 'be going to'." },
+
+    { text: "going", score: 0, type: "Wrong", explanation: "A estrutura está incompleta." },
+
+    { text: "sends", score: 0, type: "Wrong", explanation: "A frase pede futuro." }
+  ]
+},
+
+ {
+  text: "Complete: 'I think the match ____ be exciting.'",
+  options: [
+    { text: "will", score: 1, type: "Correct", explanation: "Correto! 'I think' normalmente é seguido de 'will'." },
+
+    { text: "is going to", score: 0, type: "Wrong", explanation: "Aqui estamos dando uma opinião, não falando de uma evidência." },
+
+    { text: "going", score: 0, type: "Wrong", explanation: "A estrutura está incompleta." },
+
+    { text: "is", score: 0, type: "Wrong", explanation: "A frase pede futuro." }
+  ]
+},
+
+  {
+  text: "Qual destas expressões indica futuro?",
+  options: [
+    { text: "last week", score: 0, type: "Wrong", explanation: "'Last week' indica passado." },
+
+    { text: "yesterday", score: 0, type: "Wrong", explanation: "'Yesterday' indica passado." },
+
+    { text: "next month", score: 1, type: "Correct", explanation: "Correto! 'Next month' significa 'mês que vem'." },
+
+    { text: "ago", score: 0, type: "Wrong", explanation: "'Ago' é usado para falar do passado." }
+  ]
+},
+
+{
+  text: "Qual frase está escrita corretamente?",
+  options: [
+    { text: "She going to study tonight.", score: 0, type: "Wrong", explanation: "Falta o verbo 'is'." },
+
+    { text: "She is going to study tonight.", score: 1, type: "Correct", explanation: "Correto! Essa é a estrutura correta do futuro com 'be going to'." },
+
+    { text: "She is going study tonight.", score: 0, type: "Wrong", explanation: "Falta a palavra 'to'." },
+
+    { text: "She will going study tonight.", score: 0, type: "Wrong", explanation: "Não usamos 'will going'." }
+  ]
+},
+
+  {
+  text: "Complete: 'Our flight leaves in two hours. We ____ travel to Mexico today.'",
+  options: [
+    { text: "will", score: 0, type: "Wrong", explanation: "A viagem já está planejada. A resposta correta era 'are going to'." },
+
+    { text: "are going to", score: 1, type: "Correct", explanation: "Correto! Existe um plano já organizado." },
+
+    { text: "going", score: 0, type: "Wrong", explanation: "A estrutura está incompleta." },
+
+    { text: "travels", score: 0, type: "Wrong", explanation: "A frase pede futuro." }
+  ]
+},
+
+{
+  text: "Na frase 'We're going to watch the final tomorrow.', quais são as duas pistas de que ela fala sobre o futuro?",
+  options: [
+    { text: "'going to' e 'tomorrow'", score: 1, type: "Correct", explanation: "Correto! A estrutura do futuro e a expressão de tempo mostram que a frase fala do futuro." },
+
+    { text: "'watch' e 'going to'", score: 0, type: "Wrong", explanation: "'Watch' não indica futuro." },
+
+    { text: "'Tomorrow' e 'watch'", score: 0, type: "Wrong", explanation: "'Watch' não indica futuro." },
+
+    { text: "'the' e 'final'", score: 0, type: "Wrong", explanation: "Essas palavras não indicam tempo." }
+  ]
+},
+
+ {
+  text: "Qual destas frases NÃO fala sobre o futuro?",
+  options: [
+    { text: "Brazil will play tomorrow.", score: 0, type: "Wrong", explanation: "Essa frase fala do futuro." },
+
+    { text: "They're going to visit the stadium.", score: 0, type: "Wrong", explanation: "Essa frase fala do futuro." },
+
+    { text: "The fans watched the match yesterday.", score: 1, type: "Correct", explanation: "Correto! Essa frase está no passado." },
+
+    { text: "I'm going to buy a new jersey.", score: 0, type: "Wrong", explanation: "Essa frase fala do futuro." }
+  ]
+},
+
+ {
+  text: "Na frase 'I'll help you!', por que usamos 'will'?",
+  options: [
+    { text: "Porque é um plano feito com antecedência.", score: 0, type: "Wrong", explanation: "Planos normalmente usam 'be going to'." },
+
+    { text: "Porque existe uma evidência.", score: 0, type: "Wrong", explanation: "Evidências normalmente usam 'be going to'." },
+
+    { text: "Porque a decisão foi tomada naquele momento.", score: 1, type: "Correct", explanation: "Correto! 'Will' é muito usado para decisões espontâneas." },
+
+    { text: "Porque a ação aconteceu ontem.", score: 0, type: "Wrong", explanation: "A frase fala do futuro." }
   ]
 }
 ];
